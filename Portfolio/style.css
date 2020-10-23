@@ -190,7 +190,7 @@ p {
 }
 
 #header .nav-list ul li:hover a {
-    color:deepskyblue;
+    color:#00bfff;
 }
 
 #header .hamburger {
@@ -452,7 +452,7 @@ p {
     height: 100%;
     width: 100%;
     background:linear-gradient(60deg, #29323c 0%,#485563 100%);
-    opacity: .5;
+    opacity: .2;
     z-index: -1;
 }
 
