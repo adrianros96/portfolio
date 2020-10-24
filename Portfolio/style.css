@@ -337,18 +337,6 @@ p {
     animation: fade_in 3s ease;
 }
 
-/* 
-#hero::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: .7;
-    z-index: -1;
-} */
 
 #hero .hero {
     max-width: 1200px;
@@ -357,7 +345,7 @@ p {
 }
 
 #hero h1 {
-    display: block;
+    display: table;
     width: fit-content;
     font-size: 4rem;
     position: relative;
@@ -385,6 +373,7 @@ p {
     top: 0;
     left: 0;
     width: 0;
+    height: 100%;
     background-color: #00bfff;
     animation: text_reveal_box 1s ease;
     animation-delay: .5s;
@@ -441,6 +430,7 @@ p {
     margin: 10px 5%;
     position: relative;
     z-index: 1;
+    opacity: 0;
     overflow: hidden;
 }
 
@@ -531,6 +521,13 @@ p {
 #projects .project-info p {
     color: white;
 }
+
+/* #projects .project-info .project-btn {
+    width: 100%;
+}
+#projects .project-info .project-btn a {
+    float: cen
+} */
 
 #projects .project-img {
     flex-basis: 50%;
@@ -732,6 +729,51 @@ background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     }
 }
 
+@keyframes anim1 {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim2 {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim3 {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim4 {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 @keyframes gradient-bg
 {
     0%{
@@ -840,6 +882,7 @@ background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
         height: 400px;
         margin: 0;
         width: 100%;
+        opacity: 0;
         border-radius: 0;
     }
 
