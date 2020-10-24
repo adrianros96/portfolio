@@ -1,4 +1,9 @@
-const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+import App from './app.js';
+
+const app = async () => {
+    document.getElementById('app').appendChild(await App());
+
+    const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
 const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
 // const header = document.querySelector('.header.container');
@@ -14,7 +19,7 @@ const imagee = document.querySelector('.about .col-left');
 const observer1 = new IntersectionObserver((entries) =>  {
     entries.forEach((entry) => {
         if(entry.intersectionRatio > 0) {
-            entry.target.style.animation = `anim1 2s forwards ease-out`
+            entry.target.style.animation = `anim1 1.5s forwards ease-out`
         } 
         else {
             entry.target.style.animation = 'none';
@@ -26,7 +31,7 @@ const observer2 = new IntersectionObserver((entries) =>  {
 
     entries.forEach((entry) => {
         if(entry.intersectionRatio > 0) {
-            entry.target.style.animation = `anim2 2s forwards ease-out`
+            entry.target.style.animation = `anim2 1.5s forwards ease-out`
         } 
         else {
             entry.target.style.animation = 'none';
@@ -93,3 +98,7 @@ menu_item.forEach(item => {
         mobile_menu.classList.remove('active');
     })
 })
+};
+// Load app
+
+app();
